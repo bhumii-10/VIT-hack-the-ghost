@@ -1,0 +1,17 @@
+{
+    "name": "SankatSaathi - Global Response System",
+    "short_name": "SankatSaathi",
+    "description": "Real-time emergency coordination and response system.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0a0f",
+    "theme_color": "#ff3b30",
+    "icons": [
+        {
+            "src": "/logo.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        }
+    ]
+}
