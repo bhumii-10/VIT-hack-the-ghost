@@ -1,0 +1,17 @@
+{
+  "endpoint": "https://fcm.googleapis.com/fcm/send/test",
+  "keys": {
+    "p256dh": "test-p256dh-key",
+    "auth": "test-auth-key"
+  },
+  "payload": {
+    "title": "SankatSaathi Emergency Alert",
+    "body": "Test emergency notification",
+    "icon": "/logo.jpg",
+    "badge": "/logo.jpg",
+    "data": {
+      "url": "/emergency",
+      "type": "emergency"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "backend/app.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/app.py",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "*"
+      }
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "frontend/dist/assets/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|webp))",
+      "dest": "frontend/dist/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "frontend/dist/index.html"
+    }
+  ],
+  "env": {
+    "PYTHONPATH": "backend"
+  }
+}

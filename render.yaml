@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: sankatsaathi-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "chmod +x build.sh && ./build.sh"
+    startCommand: "cd backend && python app_simple.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.5
+      - key: PYTHONPATH
+        value: backend
+      - key: PORT
+        value: 10000
