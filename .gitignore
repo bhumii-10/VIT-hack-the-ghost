@@ -23,5 +23,3 @@ dist/
 build/
 frontend/dist/
 
-# Frontend has its own repo (VIT-invasion)
-frontend/
