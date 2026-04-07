@@ -1,6 +1,3 @@
--- =============================================
--- 🚀 ENABLE REALTIME FOR CHAT & DASHBOARD 🚀
--- =============================================
 
 -- In Supabase, Realtime is disabled by default for Security.
 -- We must explicitly add our tables to the 'supabase_realtime' publication.
