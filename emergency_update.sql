@@ -1,6 +1,3 @@
--- ==========================================
--- 🚀 EMERGENCY BROADCAST & AUTO-CHAT UPDATE
--- ==========================================
 
 -- 1. Update Profiles for Broadcasting
 ALTER TABLE profiles 
